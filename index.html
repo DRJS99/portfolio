@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kylian Viller — Développeur d'applications mobiles</title>
-<meta name="description" content="Kylian Viller, développeur et éditeur indépendant d'applications mobiles Android et iOS en React Native, basé à Belfort. Découvrez Pesio, application de suivi de poids.">
+<meta name="description" content="Kylian Viller, développeur et éditeur indépendant d'applications mobiles Android et iOS (Flutter, React Native, Kotlin), basé à Belfort. Portfolio : Pesio, TrackFit, Impôt & Moi, Météo, Social.">
 <link rel="icon" type="image/png" href="pesio-icon.png">
 <style>
   :root {
@@ -35,7 +35,7 @@
   }
 
   .container {
-    max-width: 780px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 24px;
   }
@@ -65,7 +65,7 @@
   .lead {
     font-size: 1.1rem;
     color: var(--text-muted);
-    max-width: 640px;
+    max-width: 680px;
     margin: 0;
   }
 
@@ -80,66 +80,98 @@
 
   h2 {
     font-size: 1.5rem;
-    margin: 0 0 28px;
+    margin: 0 0 8px;
     font-weight: 700;
+  }
+
+  .section-intro {
+    color: var(--text-muted);
+    margin: 0 0 28px;
+    max-width: 640px;
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .app-card {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
     background: var(--bg-alt);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 24px;
+  }
+
+  .app-card-head {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
   }
 
   .app-icon {
     flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
     display: block;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
+  .app-icon-glyph {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
   .app-card h3 {
     margin: 0 0 4px;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .app-tag {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: var(--accent-dark);
     background: rgba(22, 163, 74, 0.1);
     padding: 3px 10px;
     border-radius: 999px;
-    margin-bottom: 10px;
   }
 
   .app-card p {
     margin: 0;
     color: var(--text-muted);
+    font-size: 0.95rem;
   }
 
   .stack-list {
     list-style: none;
     padding: 0;
-    margin: 24px 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
   }
 
   .stack-list li {
-    background: var(--bg-alt);
+    background: var(--bg);
     border: 1px solid var(--border);
-    padding: 6px 14px;
+    padding: 4px 12px;
     border-radius: 999px;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
   }
 
@@ -185,6 +217,12 @@
     color: var(--text);
   }
 
+  @media (max-width: 700px) {
+    .apps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 600px) {
     header.hero {
       padding: 64px 0 48px;
@@ -197,11 +235,6 @@
     section {
       padding: 48px 0;
     }
-
-    .app-card {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   }
 </style>
 </head>
@@ -212,37 +245,125 @@
     <p class="eyebrow">Développeur & éditeur d'applications mobiles</p>
     <h1>Kylian Viller</h1>
     <p class="lead">
-      J'édite et commercialise des applications mobiles Android et iOS, développées en React Native
-      et TypeScript. Auto-entrepreneur basé à Belfort, je conçois des applications simples, soignées
-      et respectueuses de la vie privée de leurs utilisateurs.
+      J'édite et commercialise des applications mobiles Android et iOS, en choisissant la
+      technologie la plus adaptée à chaque projet — Flutter, React Native ou Kotlin natif.
+      Auto-entrepreneur basé à Belfort, je conçois des applications simples, soignées et
+      respectueuses de la vie privée de leurs utilisateurs.
     </p>
   </div>
 </header>
 
 <section id="apps">
   <div class="container">
-    <h2>Mon application</h2>
-    <div class="app-card">
-      <img class="app-icon" src="pesio-icon.png" alt="Icône de l'application Pesio">
-      <div>
-        <span class="app-tag">Android · iOS</span>
-        <h3>Pesio</h3>
-        <p>
-          Pesio est une application mobile de suivi de poids : enregistrez vos pesées et suivez
-          votre évolution grâce à des graphiques clairs. Toutes les données restent stockées
-          localement sur l'appareil, sans compte ni serveur — la confidentialité avant tout.
-          Gratuite avec publicités, avec une option Premium sans pub.
-        </p>
-      </div>
-    </div>
+    <h2>Mes applications</h2>
+    <p class="section-intro">Un aperçu des applications que je développe, sur plusieurs stacks techniques.</p>
 
-    <ul class="stack-list">
-      <li>React Native</li>
-      <li>Expo</li>
-      <li>TypeScript</li>
-      <li>Android</li>
-      <li>iOS</li>
-    </ul>
+    <div class="apps-grid">
+
+      <div class="app-card">
+        <div class="app-card-head">
+          <img class="app-icon" src="pesio-icon.png" alt="Icône de l'application Pesio">
+          <div>
+            <span class="app-tag">Android · iOS</span>
+            <h3>Pesio</h3>
+          </div>
+        </div>
+        <p>
+          Suivi de poids avec graphiques d'évolution. Toutes les données restent stockées
+          localement sur l'appareil — aucun compte, aucun serveur. Gratuite avec publicités,
+          option Premium sans pub.
+        </p>
+        <ul class="stack-list">
+          <li>React Native</li>
+          <li>Expo</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+
+      <div class="app-card">
+        <div class="app-card-head">
+          <div class="app-icon-glyph" style="background:#208AEF;">
+            <svg width="30" height="30" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="M34,46 L34,62 L28,62 L28,46 Z M22,50 L22,58 L16,58 L16,50 Z M46,40 L46,68 L40,68 L40,40 Z M68,40 L68,68 L62,68 L62,40 Z M92,50 L92,58 L86,58 L86,50 Z M80,46 L80,62 L74,62 L74,46 Z M40,51 L68,51 L68,57 L40,57 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="app-tag">Android</span>
+            <h3>TrackFit</h3>
+          </div>
+        </div>
+        <p>
+          Coach sportif par caméra : comptage de répétitions et correction de posture en temps
+          réel, 100% local et hors-ligne (ML Kit Pose Detection). Complété par un coach IA vocal
+          auquel on peut poser des questions à voix haute pendant l'entraînement.
+        </p>
+        <ul class="stack-list">
+          <li>Kotlin</li>
+          <li>Jetpack Compose</li>
+          <li>ML Kit</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+
+      <div class="app-card">
+        <div class="app-card-head">
+          <div class="app-icon-glyph" style="background:linear-gradient(135deg,#4f46e5,#6366f1);">€</div>
+          <div>
+            <span class="app-tag">Android</span>
+            <h3>Impôt &amp; Moi</h3>
+          </div>
+        </div>
+        <p>
+          Simulateur pédagogique d'impôt sur le revenu français : calcul par tranches, quotient
+          familial, réductions et crédits d'impôt, avec comparateur de revenus et
+          visualisations graphiques.
+        </p>
+        <ul class="stack-list">
+          <li>Flutter</li>
+          <li>Riverpod</li>
+          <li>fl_chart</li>
+        </ul>
+      </div>
+
+      <div class="app-card">
+        <div class="app-card-head">
+          <img class="app-icon" src="meteo-icon.png" alt="Icône de l'application Météo">
+          <div>
+            <span class="app-tag">Android · iOS</span>
+            <h3>Météo</h3>
+          </div>
+        </div>
+        <p>
+          Prévisions météo heure par heure et à 7 jours, avec radar de précipitations en temps
+          réel et géolocalisation automatique.
+        </p>
+        <ul class="stack-list">
+          <li>React Native</li>
+          <li>Expo</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+
+      <div class="app-card">
+        <div class="app-card-head">
+          <div class="app-icon-glyph" style="background:linear-gradient(135deg,#ec4899,#8b5cf6);">S</div>
+          <div>
+            <span class="app-tag">Android · iOS</span>
+            <h3>Social</h3>
+          </div>
+        </div>
+        <p>
+          Projet personnel de réseau social full-stack : fil d'actualité, likes, commentaires,
+          messagerie instantanée et authentification, avec backend Firebase.
+        </p>
+        <ul class="stack-list">
+          <li>React Native</li>
+          <li>Expo</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 
