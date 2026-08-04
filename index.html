@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kylian Viller — Développeur d'applications mobiles</title>
+<meta name="description" content="Kylian Viller, développeur et éditeur indépendant d'applications mobiles Android et iOS avec Flutter, basé à Belfort. Découvrez Pesio, application de suivi de poids.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f7f8fa;
+    --text: #1a1d23;
+    --text-muted: #5a6270;
+    --accent: #2f6fed;
+    --accent-dark: #1e4fb8;
+    --border: #e5e8ec;
+    --radius: 12px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.hero {
+    padding: 96px 0 72px;
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type {
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 28px;
+    font-weight: 700;
+  }
+
+  .app-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+
+  .app-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .app-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.2rem;
+  }
+
+  .app-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+    background: rgba(47, 111, 237, 0.1);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+
+  .app-card p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  .stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stack-list li {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .contact-box {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+
+  .contact-box p {
+    color: var(--text-muted);
+    margin: 0 0 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+
+  .btn:hover {
+    background: var(--accent-dark);
+  }
+
+  footer {
+    padding: 40px 0 56px;
+  }
+
+  .legal {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .legal strong {
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    header.hero {
+      padding: 64px 0 48px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    section {
+      padding: 48px 0;
+    }
+
+    .app-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <p class="eyebrow">Développeur & éditeur d'applications mobiles</p>
+    <h1>Kylian Viller</h1>
+    <p class="lead">
+      J'édite et commercialise des applications mobiles Android et iOS, développées avec Flutter.
+      Auto-entrepreneur basé à Belfort, je conçois des applications simples, soignées et utiles au quotidien.
+    </p>
+  </div>
+</header>
+
+<section id="apps">
+  <div class="container">
+    <h2>Mon application</h2>
+    <div class="app-card">
+      <div class="app-icon">P</div>
+      <div>
+        <span class="app-tag">Android · iOS</span>
+        <h3>Pesio</h3>
+        <p>
+          Pesio est une application mobile de suivi de poids : simple et efficace, elle permet
+          d'enregistrer son poids régulièrement et de suivre son évolution dans le temps.
+        </p>
+      </div>
+    </div>
+
+    <ul class="stack-list">
+      <li>Flutter</li>
+      <li>Android</li>
+      <li>iOS</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <p>Une question, un projet ou une demande de partenariat ? N'hésitez pas à me contacter.</p>
+      <a class="btn" href="mailto:mobile.dev.kylian@gmail.com">mobile.dev.kylian@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="legal">
+      <strong>Mentions légales</strong><br>
+      Kylian Viller — Entreprise individuelle (auto-entrepreneur)<br>
+      Activité : Édition et commercialisation d'applications mobiles (code APE 5829C)<br>
+      SIRET : XXX XXX XXX XXXXX <em>(à compléter)</em><br>
+      Adresse : Belfort, France<br>
+      Contact : <a href="mailto:mobile.dev.kylian@gmail.com">mobile.dev.kylian@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
