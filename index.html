@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kylian Viller — Développeur d'applications mobiles</title>
-<meta name="description" content="Kylian Viller, développeur et éditeur indépendant d'applications mobiles Android et iOS avec Flutter, basé à Belfort. Découvrez Pesio, application de suivi de poids.">
+<meta name="description" content="Kylian Viller, développeur et éditeur indépendant d'applications mobiles Android et iOS en React Native, basé à Belfort. Découvrez Pesio, application de suivi de poids.">
+<link rel="icon" type="image/png" href="pesio-icon.png">
 <style>
   :root {
     --bg: #ffffff;
     --bg-alt: #f7f8fa;
     --text: #1a1d23;
     --text-muted: #5a6270;
-    --accent: #2f6fed;
-    --accent-dark: #1e4fb8;
+    --accent: #16a34a;
+    --accent-dark: #15803d;
     --border: #e5e8ec;
     --radius: 12px;
   }
@@ -98,13 +99,9 @@
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 700;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
   .app-card h3 {
@@ -117,7 +114,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--accent-dark);
-    background: rgba(47, 111, 237, 0.1);
+    background: rgba(22, 163, 74, 0.1);
     padding: 3px 10px;
     border-radius: 999px;
     margin-bottom: 10px;
@@ -215,8 +212,9 @@
     <p class="eyebrow">Développeur & éditeur d'applications mobiles</p>
     <h1>Kylian Viller</h1>
     <p class="lead">
-      J'édite et commercialise des applications mobiles Android et iOS, développées avec Flutter.
-      Auto-entrepreneur basé à Belfort, je conçois des applications simples, soignées et utiles au quotidien.
+      J'édite et commercialise des applications mobiles Android et iOS, développées en React Native
+      et TypeScript. Auto-entrepreneur basé à Belfort, je conçois des applications simples, soignées
+      et respectueuses de la vie privée de leurs utilisateurs.
     </p>
   </div>
 </header>
@@ -225,19 +223,23 @@
   <div class="container">
     <h2>Mon application</h2>
     <div class="app-card">
-      <div class="app-icon">P</div>
+      <img class="app-icon" src="pesio-icon.png" alt="Icône de l'application Pesio">
       <div>
         <span class="app-tag">Android · iOS</span>
         <h3>Pesio</h3>
         <p>
-          Pesio est une application mobile de suivi de poids : simple et efficace, elle permet
-          d'enregistrer son poids régulièrement et de suivre son évolution dans le temps.
+          Pesio est une application mobile de suivi de poids : enregistrez vos pesées et suivez
+          votre évolution grâce à des graphiques clairs. Toutes les données restent stockées
+          localement sur l'appareil, sans compte ni serveur — la confidentialité avant tout.
+          Gratuite avec publicités, avec une option Premium sans pub.
         </p>
       </div>
     </div>
 
     <ul class="stack-list">
-      <li>Flutter</li>
+      <li>React Native</li>
+      <li>Expo</li>
+      <li>TypeScript</li>
       <li>Android</li>
       <li>iOS</li>
     </ul>
